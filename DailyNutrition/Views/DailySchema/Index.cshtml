@@ -4,57 +4,79 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>My daily nutrition</h1>
+<div class="row" style="padding-top:5%">
+    <div class="column">
+        <div class="box">
+            <h2>Add breakfast</h2>
+            <img src="~/images/breakfast.jpg" alt="breakfast" onclick="location.href='YOUR-URL-HERE';" />
+        </div>
+    </div>
+    <div class="column">
+        <div class="box">
+            <h2>Add lunch</h2>
+            <img src="~/images/lunch.jpeg" alt="breakfast" onclick="location.href='YOUR-URL-HERE';" />
+        </div>
+    </div>
+    <div class="column">
+        <div class="box">
+            <h2>Add dinner</h2>
+            <img src="~/images/dinner.jpg" alt="breakfast" onclick="location.href='YOUR-URL-HERE';" />
+        </div>
+    </div>
+    <div class="column">
+        <div class="box">
+            <h2>Add snacks</h2>
+            <img src="~/images/snacks.jpeg" alt="breakfast" onclick="location.href='YOUR-URL-HERE';" />
+        </div>
+    </div>
+</div>
 
-<p>
-    <a asp-action="Create">It's feeding time!</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FeedingDuration)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FormulaAmount)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.D_Vitamin_Intake)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FeedingDuration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FormulaAmount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.D_Vitamin_Intake)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
+@*<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FeedingDuration)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FormulaAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.D_Vitamin_Intake)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FeedingDuration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FormulaAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.D_Vitamin_Intake)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>*@
