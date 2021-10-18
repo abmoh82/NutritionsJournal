@@ -17,6 +17,6 @@ namespace DailyNutrition
         [DisplayName("Vätska")]
         public string Beverage { get; set; }
         [DisplayName("Volym")]
-        public int Volym { get; set; }
+        public int? Volym { get; set; }
     }
 }
