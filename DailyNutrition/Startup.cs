@@ -1,10 +1,10 @@
-using DailyNutrition.DataContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using DailyNutrition.Data;
 
 namespace DailyNutrition
 {
@@ -22,6 +22,9 @@ namespace DailyNutrition
         {
             services.AddControllersWithViews();
             services.AddMvc();
+
+            services.AddDbContext<DailyNutritionContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("DailyNutritionContext")));
             services.AddDbContext<DailyNutritionContext>(item => item.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 

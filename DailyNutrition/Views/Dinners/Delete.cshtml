@@ -1,0 +1,49 @@
+﻿@model DailyNutrition.Models.Dinner
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Är du säker på att du vill ta bort?</h3>
+<div>
+    <h4>Dinner</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Portion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Portion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Beverage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Beverage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Volym)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Volym)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Ta bort" class="btn btn-danger" /> |
+        <a asp-action="Index">Se tidigare middagar</a>
+    </form>
+</div>

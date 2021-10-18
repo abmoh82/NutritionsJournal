@@ -1,0 +1,64 @@
+﻿@model IEnumerable<DailyNutrition.Models.Breakfast>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Lägg till frukost</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.D_Vitamin_Intake)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Portion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beverage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Volym)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.D_Vitamin_Intake)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Portion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Beverage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Volym)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Ändra</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Detalj vy</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Ta bort</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

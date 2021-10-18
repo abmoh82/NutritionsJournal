@@ -1,0 +1,52 @@
+﻿@model DailyNutrition.Models.Breakfast
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4 style="text-align:center; color:#00000080">Lägg till frukost</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="D_Vitamin_Intake" /> @Html.DisplayNameFor(model => model.D_Vitamin_Intake)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Portion" class="control-label"></label>
+                <input asp-for="Portion" class="form-control" />
+                <span asp-validation-for="Portion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Beverage" class="control-label"></label>
+                <input asp-for="Beverage" class="form-control" />
+                <span asp-validation-for="Beverage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Volym" class="control-label"></label>
+                <input asp-for="Volym" class="form-control" />
+                <span asp-validation-for="Volym" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Spara" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Se tidigare frukost</a>
+</div>
