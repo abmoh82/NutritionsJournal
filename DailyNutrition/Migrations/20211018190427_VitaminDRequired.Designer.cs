@@ -4,14 +4,16 @@ using DailyNutrition.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DailyNutrition.Migrations
 {
     [DbContext(typeof(DailyNutritionContext))]
-    partial class DailyNutritionContextModelSnapshot : ModelSnapshot
+    [Migration("20211018190427_VitaminDRequired")]
+    partial class VitaminDRequired
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

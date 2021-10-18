@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace DailyNutrition
 {
     public class NutritionBase
     {
+        [Required]
         [DisplayName("Beskrivning")]
         public string Description { get; set; }
         [DisplayName("Datum")]
@@ -16,7 +15,7 @@ namespace DailyNutrition
         public double Portion { get; set; }
         [DisplayName("Vätska")]
         public string Beverage { get; set; }
-        [DisplayName("Volym")]
+        [DisplayName("Volym i ml")]
         public int? Volym { get; set; }
     }
 }
