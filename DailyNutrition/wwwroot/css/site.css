@@ -90,11 +90,11 @@ body {
 
 header {
     /*    position: relative;
-*/ background-color: white;
+*/ background-color: #FF5733;
     /*    height: 47vh;
     min-height: 19rem;*/
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
     header video {
