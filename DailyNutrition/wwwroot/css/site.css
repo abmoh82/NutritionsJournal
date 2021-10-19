@@ -90,7 +90,7 @@ body {
 
 header {
     /*    position: relative;
-*/ background-color: #FF5733;
+*/ /*background-color: #FF5733;*/
     /*    height: 47vh;
     min-height: 19rem;*/
     width: 100%;
@@ -152,12 +152,16 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .box {
         width: 100%;
         height: 100%;
+        padding-bottom: 20px;
     }
 
     img {
@@ -226,18 +230,18 @@ img {
         height: auto;
     }
 
-    /*    .NutritionContainer {
+    /*    .container {
         position: relative;
-        width: 25%;
-    }
+        width: 50%;
+    }*/
 
-    .nutritionImage {
+    /* .image {
         display: block;
         width: 100%;
         height: auto;
-    }
+    }*/
 
-    .overlay {
+    .overlayImage {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -247,16 +251,21 @@ img {
         width: 100%;
         opacity: 0;
         transition: .5s ease;
-        background-color: #008CBA;
+        background-color: whitesmoke;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        display: block;
+        cursor: pointer;
     }
 
-    .NutritionContainer:hover .overlay {
-        opacity: 1;
+    .box:hover .overlayImage {
+        opacity: 0.9;
     }
 
-    .nutritionText {
-        color: white;
-        font-size: 20px;
+    .text {
+        color: #FF5733;
+        font-size: 38px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -264,5 +273,5 @@ img {
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
-    }*/
+    }
 }

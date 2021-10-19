@@ -5,24 +5,36 @@
 
 
 <div class="row" style="padding-top:5%">
-    <div class="column">
+    <div class="col-md-3">
         <div class="box">
-            <img src="~/images/breakfast.jpg" alt="breakfast" onclick="location.href='@Url.Action("Create", "Breakfasts")'" />
+            <img src="~/images/breakfast.jpg" alt="breakfast" />
+            <div class="overlayImage" onclick="location.href='@Url.Action("Create", "Breakfasts")'">
+                <div class="text">Lägg till frukost</div>
+            </div>
         </div>
     </div>
-    <div class="column">
+    <div class="col-md-3">
         <div class="box">
-            <img src="~/images/lunch.jpeg" alt="Lunch" onclick="location.href='@Url.Action("Create", "Lunches")'" />
+            <img src="~/images/lunch.jpeg" alt="Lunch" />
+            <div class="overlayImage" onclick="location.href='@Url.Action("Create", "Lunches")'">
+                <div class="text">Lägg till lunch</div>
+            </div>
         </div>
     </div>
-    <div class="column">
+    <div class="col-md-3">
         <div class="box">
-            <img src="~/images/dinner.jpg" alt="Dinner" onclick="location.href='@Url.Action("Create", "Dinners")'" />
+            <img src="~/images/dinner.jpg" alt="Dinner" />
+            <div class="overlayImage" onclick="location.href='@Url.Action("Create", "Dinners")'">
+                <div class="text">Lägg till middag</div>
+            </div>
         </div>
     </div>
-    <div class="column">
+    <div class="col-md-3">
         <div class="box">
-            <img src="~/images/snacks.jpeg" alt="Snacks" onclick="location.href='@Url.Action("Create", "Snacks")';" />
+            <img src="~/images/snacks.jpeg" alt="Snacks" />
+            <div class="overlayImage" onclick="location.href='@Url.Action("Create", "Snacks")'">
+                <div class="text">Lägg till mellanmål</div>
+            </div>
         </div>
     </div>
 </div>
